@@ -30,9 +30,9 @@ function Content() {
   return (
     <div>
       <div>
-        {comments.map((comment) => (
-          <p key={comment.id}>{comment.body}</p>
-        ))}
+        {comments
+          .map((comment) => <p key={comment.id}>{comment.body}</p>)
+          .reverse()}
       </div>
       <CommentForm
         comment={newComment}
