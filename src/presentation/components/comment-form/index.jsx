@@ -1,5 +1,8 @@
 import React from "react";
 
+//Стили
+import styles from "./form.module.scss";
+
 //компоненты
 import { Button } from "../../ui-kit/button";
 
@@ -12,12 +15,11 @@ function CommentForm(props) {
   };
 
   return (
-    <form>
+    <form className={styles.form}>
       <textarea
+        className={styles.window}
         onChange={handleChange}
         value={comment}
-        cols="30"
-        rows="10"
       ></textarea>
       <Button name="Отправить" onClick={onClickHandler} />
     </form>
